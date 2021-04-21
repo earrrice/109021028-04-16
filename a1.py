@@ -57,7 +57,7 @@ def geet_price(url):
         price=0
         priceUl=soup.find("ul",{"class":"price"})
         for liData in liData.text:
-            print("liData\n\n",liData.taxt)
+            print("liData\n\n",liData.text)
             if "ISBN" in liData.text:
                 isbnStr=liData.text[5:]
         price=priceUl.find("li").text[3:-1]
